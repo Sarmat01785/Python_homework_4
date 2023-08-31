@@ -5,3 +5,25 @@
 Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. 
 Затем пользователь вводит сами элементы множеств.
 """
+n = int(input("Введите кол-во элементов первого множества: "))
+m = int(input("Введите кол-во элементов вторго множества: "))
+
+set_1 = set()
+set_2 = set()
+
+print("Введите элементы первого множества: ")
+for _ in range(n):  # for i in range(n):
+    set_1.add(int(input()))
+
+print("Введите элементы второго множества: ")
+for _ in range(m):  # for i in range(m):
+    set_2.add(int(input()))
+
+# Нахождение общих элементов и сортировка их в порядке возрастания
+common_element = sorted(set_1.intersection(set_2))
+print(common_element)
+print(*common_element)
+
+print("Общие элементы в порядке возрастания: ")
+for element in common_element:
+    print(element)
